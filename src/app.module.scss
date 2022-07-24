@@ -1,0 +1,64 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    background-color: blueviolet;
+ 
+}
+
+
+.gridContainer{
+    display: grid;
+    margin-top: 4rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto)  repeat(5, 4rem);   
+    
+    
+}
+
+
+.gridContainer button{
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    background-color: paleturquoise;
+    font-size: larger;
+ } 
+ .gridContainer button:hover
+ {
+    background-color: white;
+ }
+
+
+.spanTwo{
+    grid-column: span 2;
+}
+
+.output{
+
+    background-color: black;
+    opacity: 0.75;
+    grid-column:  1 /-1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: large;
+
+
+    &_prevOperand{
+        color: white;
+        font-size: large;
+        margin-right: 0.5rem;
+    }
+    &_currentOperand{
+        color: white;
+        font-size: larger;
+        margin-right: 0.5rem;
+    }
+}
